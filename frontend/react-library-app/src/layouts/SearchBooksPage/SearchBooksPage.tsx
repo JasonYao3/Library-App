@@ -10,7 +10,7 @@ export const SearchBooksPage = () => {
   const [httpError, setHttpError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [booksPerPage] = useState(5);
-  const [totalAmountOfbooks, setTotalAmountOfBooks] = useState(0);
+  const [totalAmountOfBooks, setTotalAmountOfBooks] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
   const [search, setSearch] = useState("");
   const [searchUrl, setSearchUrl] = useState("");
@@ -116,9 +116,9 @@ export const SearchBooksPage = () => {
   const indexOfLastBook: number = currentPage * booksPerPage;
   const indexOfFirstBook: number = indexOfLastBook - booksPerPage;
   let lastItem =
-    booksPerPage * currentPage <= totalAmountOfbooks
+    booksPerPage * currentPage <= totalAmountOfBooks
       ? booksPerPage * currentPage
-      : totalAmountOfbooks;
+      : totalAmountOfBooks;
 
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
@@ -189,13 +189,13 @@ export const SearchBooksPage = () => {
               </div>
             </div>
           </div>
-          {totalAmountOfbooks > 0 ? (
+          {totalAmountOfBooks > 0 ? (
             <>
               <div className="mt-3">
-                <h5>Number of results: ({totalAmountOfbooks})</h5>
+                <h5>Number of results: ({totalAmountOfBooks})</h5>
               </div>
               <p>
-                {indexOfFirstBook + 1} to {lastItem} of {totalAmountOfbooks}{" "}
+                {indexOfFirstBook + 1} to {lastItem} of {totalAmountOfBooks}{" "}
                 items:
               </p>
               {books.map((book) => (
