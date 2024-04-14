@@ -68,7 +68,7 @@ export const SearchBooksPage = () => {
       setHttpError(error.message);
     });
     window.scrollTo(0, 0);
-  }, [currentPage, searchUrl]);
+  }, [currentPage, searchUrl, booksPerPage]);
 
   if (isLoading) {
     return <SpinnerLoading />;
@@ -161,27 +161,27 @@ export const SearchBooksPage = () => {
                   aria-labelledby="dropdownMenuButton1"
                 >
                   <li onClick={() => categoryField("All")}>
-                    <a className="dropdown-item" href="#">
+                    <a className="dropdown-item" href="/#">
                       All
                     </a>
                   </li>
                   <li onClick={() => categoryField("FE")}>
-                    <a className="dropdown-item" href="#">
+                    <a className="dropdown-item" href="/#">
                       Front End
                     </a>
                   </li>
                   <li onClick={() => categoryField("BE")}>
-                    <a className="dropdown-item" href="#">
+                    <a className="dropdown-item" href="/#">
                       Back End
                     </a>
                   </li>
                   <li onClick={() => categoryField("Data")}>
-                    <a className="dropdown-item" href="#">
+                    <a className="dropdown-item" href="/#">
                       Data
                     </a>
                   </li>
                   <li onClick={() => categoryField("DevOps")}>
-                    <a className="dropdown-item" href="#">
+                    <a className="dropdown-item" href="/#">
                       DevOps
                     </a>
                   </li>
@@ -208,7 +208,7 @@ export const SearchBooksPage = () => {
               <a
                 type="button"
                 className="btn main-color btn-md px-4 me-md-2 fw-bold text-white"
-                href="#"
+                href="/#"
               >
                 Library Services
               </a>
