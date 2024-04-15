@@ -26,7 +26,7 @@ create a user-friendly Library Management System (web app) enabling users to bro
 
 Below is a demo of final project.
 
-- JPG <br/> <br/> ![](./assets/screenshot.jpg)
+- PNG <br/> <br/> ![](./assets/screenshot.png)
 
 ---
 
