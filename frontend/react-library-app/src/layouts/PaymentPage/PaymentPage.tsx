@@ -4,8 +4,6 @@ import { SpinnerLoading } from "../Utils/SpinnerLoading";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { Link } from "react-router-dom";
 import PaymentInfoRequest from "../../models/PaymentInfoRequest";
-import { stringify } from "querystring";
-import { error } from "console";
 
 export const PaymentPage = () => {
   const { authState } = useOktaAuth();

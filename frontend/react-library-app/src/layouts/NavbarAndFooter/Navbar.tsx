@@ -1,7 +1,6 @@
 import { useOktaAuth } from "@okta/okta-react";
 import { Link, NavLink } from "react-router-dom";
 import { SpinnerLoading } from "../Utils/SpinnerLoading";
-import { log } from "console";
 
 export const Navbar = () => {
   const { oktaAuth, authState } = useOktaAuth();
