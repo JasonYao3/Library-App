@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import { StarsReview } from "../Utils/StarsReview";
 import { CheckoutAndReviewBox } from "./CheckoutAndReviewBox";
 import ReviewModel from "../../models/ReviewModel";
-import { LastestReviews } from "./LatestReviews";
+import { LatestReviews } from "./LatestReviews";
 import { useOktaAuth } from "@okta/okta-react";
 import { error } from "console";
 import { request } from "http";
@@ -148,7 +148,7 @@ export const BookCheckoutPage = () => {
         const url = `http://localhost:8080/api/books/secure/currentloans/count`;
         const requestOptions = {
           method: "GET",
-          heaaders: {
+          headers: {
             Authorization: `Bearer ${authState.accessToken?.accessToken}`,
             "Content-Type": "application/json",
           },
@@ -294,7 +294,7 @@ export const BookCheckoutPage = () => {
           />
         </div>
         <hr />
-        <LastestReviews reviews={reviews} bookId={book?.id} mobile={false} />
+        <LatestReviews reviews={reviews} bookId={book?.id} mobile={false} />
       </div>
       <div className="container d-lg-none mt-5">
         <div className="d-flex justify-content-center align-items-center">
@@ -328,7 +328,7 @@ export const BookCheckoutPage = () => {
           submitReview={submitReview}
         />
         <hr />
-        <LastestReviews reviews={reviews} bookId={book?.id} mobile={true} />
+        <LatestReviews reviews={reviews} bookId={book?.id} mobile={true} />
       </div>
     </div>
   );
