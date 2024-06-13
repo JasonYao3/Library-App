@@ -1,4 +1,4 @@
-# Full Stack Library App
+# Libby
 
 React for front-end, Java Spring Boot for back-end, MySQL database, Stripe for Credit Card Payments, Okta for authentication and Netlify for deployment.
 
